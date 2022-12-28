@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add your CSS here */
+      #email-summary {
+        width: 400px;
+        height: 600px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      #email-summary h1 {
+        text-align: center;
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+      }
+
+      #summarize-button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      #summary-content {
+        font-size: 18px;
+        line-height: 1.5;
+        overflow-y: scroll; /* This will allow the user to scroll through the email summary */
+        height: calc(100% - 50px); /* This will make the summary content take up the majority of the extension window */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add your HTML here -->
+    <div id="email-summary">
+      <h1>Email Summary</h1>
+      <button id="summarize-button">Summarize</button>
+      <div id="summary-content">
+        <!-- This div will be used to display the email summary -->
+      </div>
+    </div>
+
+    <!-- Add your JavaScript here -->
+    <script>
+      const summarizeButton = document.getElementById('summarize-button');
+      const summaryContent = document.getElementById('summary-content');
+
+      summarizeButton.addEventListener('click', () => {
+        // This function will be called when the button is clicked
+        // Here, you can retrieve the email data and generate the summary
+
+        // For example:
+        summaryContent.innerHTML = 'This is the email summary';
+      });
+    </script>
+  </body>
+</html>
